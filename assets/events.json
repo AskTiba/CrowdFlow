@@ -1,0 +1,102 @@
+[
+  {
+    "name": "World Chess Championship",
+    "location": "Various Locations",
+    "date": "November 2024",
+    "description": "The pinnacle of chess, where the reigning World Champion faces a challenger to determine the world’s top player.",
+    "frequency": "Every two years",
+    "format": "Classical chess, best of 14 games",
+    "prizeFund": "€2 million",
+    "image": "https://pbs.twimg.com/media/GXVb7sEbgAAQTwy?format=jpg&name=small"
+  },
+  {
+    "name": "Tata Steel Chess Tournament",
+    "location": "Wijk aan Zee, Netherlands",
+    "date": "January 2024",
+    "description": "One of the most prestigious chess tournaments featuring top global players and up-and-coming talents.",
+    "frequency": "Annual",
+    "format": "Round-robin, classical",
+    "prizeFund": "€250,000",
+    "image": "https://pbs.twimg.com/media/FmlBI7aWQAEQoea?format=jpg&name=large"
+  },
+  {
+    "name": "Candidates Tournament",
+    "location": "TBA",
+    "date": "April 2024",
+    "description": "A major tournament that determines the challenger for the World Chess Championship.",
+    "frequency": "Every two years",
+    "format": "Double round-robin",
+    "prizeFund": "€500,000",
+    "image": "https://pbs.twimg.com/media/GL3IJRhWAAAXUkw?format=jpg&name=large"
+  },
+  {
+    "name": "FIDE World Cup",
+    "location": "Baku, Azerbaijan",
+    "date": "August 2024",
+    "description": "A knockout tournament that serves as a qualifier for the Candidates Tournament.",
+    "frequency": "Every two years",
+    "format": "Knockout",
+    "prizeFund": "$1.6 million",
+    "image": "https://pbs.twimg.com/media/F4NwnxzXwAAa8IO?format=jpg&name=large"
+  },
+  {
+    "name": "Chess Olympiad",
+    "location": "Budapest, Hungary",
+    "date": "July 2024",
+    "description": "The largest team chess event where countries compete for the Olympiad title.",
+    "frequency": "Every two years",
+    "format": "Team event, Swiss system",
+    "prizeFund": "Trophies and medals",
+    "image": "https://pbs.twimg.com/media/GXS8e5yXIAAp-I7?format=jpg&name=4096x4096"
+  },
+  {
+    "name": "Grand Chess Tour",
+    "location": "Various Locations",
+    "date": "Throughout 2024",
+    "description": "A series of high-level chess tournaments taking place across the globe with a cumulative prize fund.",
+    "frequency": "Annual",
+    "format": "Various formats (Rapid, Blitz, Classical)",
+    "prizeFund": "$1.75 million",
+    "image": "https://pbs.twimg.com/media/GWDeE_RXYAAL9PP?format=jpg&name=large"
+  },
+  {
+    "name": "Sinquefield Cup",
+    "location": "St. Louis, USA",
+    "date": "September 2024",
+    "description": "A major stop on the Grand Chess Tour, featuring top players.",
+    "frequency": "Annual",
+    "format": "Round-robin, classical",
+    "prizeFund": "$350,000",
+    "image": "https://pbs.twimg.com/media/GVVxi3VW0AAtTkO?format=jpg&name=large"
+  },
+  {
+    "name": "Superbet Rapid & Blitz",
+    "location": "Bucharest, Romania",
+    "date": "May 2024",
+    "description": "Part of the Grand Chess Tour, this event emphasizes faster time controls like rapid and blitz.",
+    "frequency": "Annual",
+    "format": "Rapid and Blitz",
+    "prizeFund": "$175,000",
+    "image": "https://pbs.twimg.com/media/GNUPg0rX0AANeME?format=jpg&name=900x900"
+  },
+  {
+    "name": "Norway Chess",
+    "location": "Stavanger, Norway",
+    "date": "June 2024",
+    "description": "One of the strongest invitational tournaments, featuring innovative formats like Armageddon games to break ties.",
+    "frequency": "Annual",
+    "format": "Round-robin, classical",
+    "prizeFund": "€250,000",
+    "image": "https://pbs.twimg.com/media/GPzLoCea8AAfl_7?format=jpg&name=large"
+  },
+  {
+    "name": "Speed Chess Championship",
+    "location": "Online",
+    "date": "October 2024",
+    "description": "An online event organized by Chess.com where top players compete in fast time controls.",
+    "frequency": "Annual",
+    "format": "Knockout, blitz and bullet",
+    "prizeFund": "$100,000",
+    "image": "https://pbs.twimg.com/media/FVJYu96VUAAJQ5Z?format=jpg&name=large"
+  }
+]
