@@ -3,17 +3,6 @@ import React from 'react';
 import ShareIcon from '~/assets/share';
 import SaveIcon from '~/assets/save';
 
-// type Event = {
-//   name?: string;
-//   location?: string;
-//   date?: string;
-//   description?: string;
-//   frequency?: string;
-//   format?: string;
-//   prizeFund?: string;
-//   image?: string;
-// };
-
 export default function EventListItem({ event }: any) {
   return (
     <View className="OneEventListItem p-3">
