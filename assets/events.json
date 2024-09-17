@@ -1,5 +1,6 @@
 [
   {
+    "id": "1",
     "name": "World Chess Championship",
     "location": "Various Locations",
     "datetime": "2024-11-01T16:00:00",
@@ -14,6 +15,7 @@
     "totalRounds": 14
   },
   {
+    "id": "2",
     "name": "Tata Steel Chess Tournament",
     "location": "Wijk aan Zee, Netherlands",
     "datetime": "2024-01-12T10:00:00",
@@ -28,6 +30,7 @@
     "totalRounds": 13
   },
   {
+    "id": "3",
     "name": "Candidates Tournament",
     "location": "TBA",
     "datetime": "2024-04-01T14:00:00",
@@ -42,6 +45,7 @@
     "totalRounds": 14
   },
   {
+    "id": "4",
     "name": "FIDE World Cup",
     "location": "Baku, Azerbaijan",
     "datetime": "2024-08-01T12:00:00",
@@ -56,6 +60,7 @@
     "totalRounds": 7
   },
   {
+    "id": "5",
     "name": "Chess Olympiad",
     "location": "Budapest, Hungary",
     "datetime": "2024-07-01T09:00:00",
@@ -66,10 +71,11 @@
     "image": "https://pbs.twimg.com/media/GXS8e5yXIAAp-I7?format=jpg&name=4096x4096",
     "registrationFee": "€150",
     "startingTime": "09:00",
-    "roundsPerDay": 2,
+    "roundsPerDay": 1,
     "totalRounds": 11
   },
   {
+    "id": "6",
     "name": "Grand Chess Tour",
     "location": "Various Locations",
     "datetime": "2024-05-01T11:00:00",
@@ -84,6 +90,7 @@
     "totalRounds": 9
   },
   {
+    "id": "7",
     "name": "Sinquefield Cup",
     "location": "St. Louis, USA",
     "datetime": "2024-09-01T13:00:00",
@@ -98,6 +105,7 @@
     "totalRounds": 9
   },
   {
+    "id": "8",
     "name": "Superbet Rapid & Blitz",
     "location": "Bucharest, Romania",
     "datetime": "2024-05-05T10:30:00",
@@ -109,9 +117,10 @@
     "registrationFee": "$50",
     "startingTime": "10:30",
     "roundsPerDay": 3,
-    "totalRounds": 15
+    "totalRounds": 9
   },
   {
+    "id": "9",
     "name": "Norway Chess",
     "location": "Stavanger, Norway",
     "datetime": "2024-06-01T11:00:00",
@@ -126,6 +135,7 @@
     "totalRounds": 9
   },
   {
+    "id": "10",
     "name": "Speed Chess Championship",
     "location": "Online",
     "datetime": "2024-10-11T16:00:00",
@@ -136,7 +146,7 @@
     "image": "https://pbs.twimg.com/media/FVJYu96VUAAJQ5Z?format=jpg&name=large",
     "registrationFee": "$25",
     "startingTime": "16:00",
-    "roundsPerDay": 5,
+    "roundsPerDay": 4,
     "totalRounds": 20
   }
 ]

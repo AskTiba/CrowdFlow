@@ -1,18 +1,38 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, Pressable } from 'react-native';
 import React from 'react';
 import ShareIcon from '~/assets/share';
 import SaveIcon from '~/assets/save';
 import dayjs from 'dayjs';
+import { Link } from 'expo-router';
 
-export default function EventListItem({ event }: any) {
+interface Event {
+  id: string;
+  name: string;
+  location: string;
+  datetime: string;
+  description: string;
+  frequency: string;
+  format: string;
+  prizeFund: string;
+  image: string;
+  registrationFee: string;
+  startingTime: string;
+  roundsPerDay: number;
+  totalRounds: number;
+}
+
+interface EventListItemProps {
+  event: Event;
+}
+
+export default function EventListItem({ event }: EventListItemProps) {
   return (
-    <View className="OneEventListItem border-b border-gray-200 p-3">
-      <View className="">
+    <Link href={`/${event.id}`} asChild className="">
+      <Pressable className="OneEventListItem border-b border-gray-200 p-3">
         <View className="flex-row justify-between">
           <View className="flex-1">
             <Text className="text-blue-800">
-              {dayjs(event.datetime).format('ddd, D MMM')} ·{' '}
-              {dayjs(event.datetime).format('h:mm A')}
+              {dayjs(event.datetime).format('ddd,  MMM')} · {dayjs(event.datetime).format('h:mm A')}
             </Text>
             <Text className="text-lg font-bold" numberOfLines={2}>
               {event.name}
@@ -33,7 +53,7 @@ export default function EventListItem({ event }: any) {
             </TouchableOpacity>
           </View>
         </View>
-      </View>
-    </View>
+      </Pressable>
+    </Link>
   );
 }
