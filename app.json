@@ -1,10 +1,10 @@
 {
   "expo": {
-    "name": "CrowdFlow",
-    "slug": "CrowdFlow",
+    "name": "UgandaChess",
+    "slug": "uch",
     "version": "1.0.0",
 
-    "scheme": "CrowdFlow",
+    "scheme": "uch",
     "web": {
       "bundler": "metro",
       "output": "static",

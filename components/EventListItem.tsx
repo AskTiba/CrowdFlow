@@ -2,19 +2,23 @@ import { View, Text, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import ShareIcon from '~/assets/share';
 import SaveIcon from '~/assets/save';
+import dayjs from 'dayjs';
 
 export default function EventListItem({ event }: any) {
   return (
-    <View className="OneEventListItem p-3">
+    <View className="OneEventListItem border-b border-gray-200 p-3">
       <View className="">
         <View className="flex-row justify-between">
           <View className="flex-1">
-            <Text className="text-gray-800">Fri 18, Nov · 10.00 GMT</Text>
+            <Text className="text-blue-800">
+              {dayjs(event.datetime).format('ddd, D MMM')} ·{' '}
+              {dayjs(event.datetime).format('h:mm A')}
+            </Text>
             <Text className="text-lg font-bold" numberOfLines={2}>
               {event.name}
             </Text>
-            <Text className="text-gray-500">Location : {event.location}</Text>
-            <Text className="text-gray-500">Prize Fund : {event.prizeFund}</Text>
+            <Text className="text-gray-500">Venue : {event.location}</Text>
+            <Text className="text-gray-500">Registration Fee : {event.registrationFee}</Text>
           </View>
           <Image source={{ uri: event.image }} className="aspect-video w-2/5 rounded-xl" />
         </View>

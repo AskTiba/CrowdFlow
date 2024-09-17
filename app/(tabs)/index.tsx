@@ -8,8 +8,9 @@ export default function Home() {
     <>
       <Stack.Screen options={{ title: 'Events', headerTitleAlign: 'center' }} />
       <FlatList
+        className="bg-white"
         data={events}
-        renderItem={({ item }) => <EventListItem event={item} className="bg-white" />}
+        renderItem={({ item }) => <EventListItem event={item} />}
       />
     </>
   );
