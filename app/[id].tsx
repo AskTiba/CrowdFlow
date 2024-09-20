@@ -35,3 +35,5 @@ export default function EventPage() {
     </View>
   );
 }
+
+// Shatranji1324

@@ -7,18 +7,17 @@ import { Link } from 'expo-router';
 
 interface Event {
   id: string;
-  name: string;
+  event_name: string;
+  start_date: string;
+  end_date: string;
   location: string;
-  datetime: string;
   description: string;
   frequency: string;
   format: string;
-  prizeFund: string;
+  prize_fund: string;
   image: string;
-  registrationFee: string;
-  startingTime: string;
-  roundsPerDay: number;
-  totalRounds: number;
+  registration_fee: string;
+  // Add other necessary fields...
 }
 
 interface EventListItemProps {
@@ -32,13 +31,14 @@ export default function EventListItem({ event }: EventListItemProps) {
         <View className="flex-row justify-between">
           <View className="flex-1">
             <Text className="text-blue-800">
-              {dayjs(event.datetime).format('ddd,  MMM')} · {dayjs(event.datetime).format('h:mm A')}
+              {dayjs(event.start_date).format('ddd,  MMM')} ·{' '}
+              {dayjs(event.start_date).format('h:mm A')}
             </Text>
             <Text className="text-lg font-bold" numberOfLines={2}>
-              {event.name}
+              {event.event_name}
             </Text>
             <Text className="text-gray-500">Venue : {event.location}</Text>
-            <Text className="text-gray-500">Registration Fee : {event.registrationFee}</Text>
+            <Text className="text-gray-500">Registration Fee : {event.registration_fee}</Text>
           </View>
           <Image source={{ uri: event.image }} className="aspect-video w-2/5 rounded-xl" />
         </View>
