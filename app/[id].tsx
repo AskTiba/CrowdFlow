@@ -19,10 +19,10 @@ export default function EventPage() {
       <View className="">
         <Image source={{ uri: event.image }} className="aspect-video w-full rounded-xl" />
         <Text className="text-lg font-bold" numberOfLines={2}>
-          {event.name}
+          {event.event_name}
         </Text>
         <Text className="text-blue-800">
-          {dayjs(event.datetime).format('ddd,  MMM')} · {dayjs(event.datetime).format('h:mm A')}
+          {dayjs(event.start_date).format('ddd,  MMM')} · {dayjs(event.start_date).format('h:mm A')}
         </Text>
         <Text className="my-2 text-lg leading-tight">{event.description}</Text>
       </View>
