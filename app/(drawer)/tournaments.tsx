@@ -4,7 +4,7 @@ import { Stack } from 'expo-router';
 import events from '~/assets/events.json';
 import EventListItem from '~/components/EventListItem';
 
-export default function tournaments() {
+export default function Tournaments() {
   return (
     <>
       <Stack.Screen options={{ title: 'Events', headerTitleAlign: 'center' }} />

@@ -15,7 +15,7 @@ export default function CustomDrawerContent(props: any) {
   const router = useRouter();
   const { top, bottom } = useSafeAreaInsets();
   return (
-    <View className="flex-1">
+    <View className="flex-1 bg-[#f0f0f0]">
       <DrawerContentScrollView {...props}>
         <View className="flex-1 gap-y-1 p-4">
           <Text className="text-lg font-bold">Atuku Praise</Text>
@@ -35,13 +35,37 @@ export default function CustomDrawerContent(props: any) {
             leftIcon={Tournaments}
             leftText="Tournaments"
             onPress={() => {
-              router.push('./(drawer)/tournaments');
+              router.push('/(drawer)/tournaments');
             }}
           />
-          <CustomListItem leftIcon={At} leftText="Players" onPress={() => {}} />
-          <CustomListItem leftIcon={Puzzles} leftText="Puzzles" onPress={() => {}} />
-          <CustomListItem leftIcon={Settings} leftText="Settings" onPress={() => {}} />
-          <CustomListItem leftIcon={Information} leftText="About" onPress={() => {}} />
+          <CustomListItem
+            leftIcon={At}
+            leftText="Players"
+            onPress={() => {
+              router.push('/(drawer)/players');
+            }}
+          />
+          <CustomListItem
+            leftIcon={Puzzles}
+            leftText="Puzzles"
+            onPress={() => {
+              router.push('/(drawer)/puzzles');
+            }}
+          />
+          <CustomListItem
+            leftIcon={Settings}
+            leftText="Settings"
+            onPress={() => {
+              router.push('/(drawer)/settings');
+            }}
+          />
+          <CustomListItem
+            leftIcon={Information}
+            leftText="About"
+            onPress={() => {
+              router.push('/(drawer)/about');
+            }}
+          />
         </View>
       </DrawerContentScrollView>
     </View>

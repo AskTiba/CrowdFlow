@@ -1,9 +1,15 @@
-import { View, Text, Image } from 'react-native';
 import React from 'react';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import events from '~/assets/events.json';
-import dayjs from 'dayjs';
-import AdaptiveButton from '~/components/AdaptiveButton';
+import { View, Text, Image, useWindowDimensions } from 'react-native';
+import EventDetails from './screens/eventDetails';
+import Games from './screens/games';
+import Standings from './screens/standings';
+import ExtendedCustomHeader from '~/components/ExtendedCustomHeader';
+import { StatusBar } from 'expo-status-bar';
+
+const Tab = createMaterialTopTabNavigator();
 
 export default function EventPage() {
   const { id } = useLocalSearchParams();
@@ -13,26 +19,53 @@ export default function EventPage() {
     return <Text>Event wasn't found</Text>;
   }
 
-  return (
-    <View className="flex-1 justify-between bg-white p-3">
-      <Stack.Screen options={{ headerTitle: 'Event', headerTitleAlign: 'center' }} />
-      <View className="">
-        <Image source={{ uri: event.image }} className="aspect-video w-full rounded-xl" />
-        <Text className="text-lg font-bold" numberOfLines={2}>
-          {event.event_name}
-        </Text>
-        <Text className="text-blue-800">
-          {dayjs(event.start_date).format('ddd,  MMM')} · {dayjs(event.start_date).format('h:mm A')}
-        </Text>
-        <Text className="my-2 text-lg leading-tight">{event.description}</Text>
-      </View>
+  const layout = useWindowDimensions();
 
-      {/* Footer */}
-      <View className="absolute bottom-0 left-0 right-0 flex-row items-center justify-between border-t border-gray-200 p-3">
-        <Text className="text-lg font-semibold">Free</Text>
-        <AdaptiveButton className="w-1/2" size="large" title="Join and RSVP" />
-      </View>
-    </View>
+  // Calculate the width of each tab based on the screen width
+  // Subtract any padding or margin you might have on the screen
+  const tabWidth = layout.width / 3; // Divide by the number of tabs
+
+  return (
+    <>
+      <Stack.Screen
+        options={{
+          header: () => <ExtendedCustomHeader event={event} />,
+        }}
+      />
+      <StatusBar style={'auto'} backgroundColor="#f0f0f0" />
+      <Tab.Navigator
+        screenOptions={{
+          tabBarLabelStyle: {
+            fontSize: 16,
+            textTransform: 'none', // This ensures the label text isn't all caps
+            fontWeight: 'bold',
+          },
+          tabBarItemStyle: {
+            width: tabWidth,
+            padding: 0, // Remove default padding
+          },
+          tabBarStyle: {
+            backgroundColor: '#f0f0f0', // or any color you prefer
+          },
+          tabBarIndicatorStyle: {
+            backgroundColor: 'navy',
+            height: 3, // Makes the indicator more visible
+          },
+          tabBarPressColor: 'transparent', // Removes the ripple effect on Android
+        }}>
+        <Tab.Screen
+          name="Details"
+          component={EventDetails}
+          options={{ tabBarLabel: 'Details', lazy: true }}
+        />
+        <Tab.Screen name="Games" component={Games} options={{ tabBarLabel: 'Games', lazy: true }} />
+        <Tab.Screen
+          name="Standing"
+          component={Standings}
+          options={{ tabBarLabel: 'Standing', lazy: true }}
+        />
+      </Tab.Navigator>
+    </>
   );
 }
 
