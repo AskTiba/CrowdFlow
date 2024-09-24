@@ -1,10 +1,9 @@
-import { View, Text, Image } from 'react-native';
-import React from 'react';
+import { View, Text, Image, TouchableOpacity } from 'react-native';
+import React, { useState } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import LeftArrow from '~/assets/arrow-left';
 import Star from '~/assets/star';
 import Bell from '~/assets/bell';
-import { Stack } from 'expo-router';
 
 type ExtendedCustomHeaderProps = {
   event: {
@@ -13,7 +12,7 @@ type ExtendedCustomHeaderProps = {
   };
 };
 
-export default function ExtendedCustomHeader({ event }) {
+export default function ExtendedCustomHeader({ event }: ExtendedCustomHeaderProps) {
   if (!event) {
     return (
       <SafeAreaView className="bg-[#f0f0f0] p-4">
@@ -23,19 +22,16 @@ export default function ExtendedCustomHeader({ event }) {
   }
   return (
     <SafeAreaView className="px-4">
-      {/* <Stack.Screen
-        options={{
-          headerStyle: {
-            backgroundColor: '#ffd700',
-          },
-        }}
-      /> */}
       <View className="bg-[#f0f0f0] py-1">
         <View className="flex-row justify-between px-4 py-1">
           <LeftArrow color={'#000000'} />
           <View className="flex-row gap-x-8">
-            <Bell color={'#000000'} />
-            <Star color={'#000000'} />
+            <TouchableOpacity className="">
+              <Bell color={'#000000'} />
+            </TouchableOpacity>
+            <TouchableOpacity className="">
+              <Star color={'#000000'} />
+            </TouchableOpacity>
           </View>
         </View>
         <View className="w-1/2 flex-row items-center gap-x-2 px-4">

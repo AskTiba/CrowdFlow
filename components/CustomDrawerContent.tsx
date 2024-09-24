@@ -1,5 +1,5 @@
-import { View, Text, Image, Pressable, TouchableOpacity } from 'react-native';
-import React from 'react';
+import { View, Text, Image, Pressable, TouchableOpacity, Modal } from 'react-native';
+import React, { useState } from 'react';
 import { DrawerContentScrollView, DrawerItem, DrawerItemList } from '@react-navigation/drawer';
 import { Stack, useRouter } from 'expo-router';
 import { SafeAreaView, useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -10,16 +10,23 @@ import Settings from '~/assets/settings';
 import At from '~/assets/at';
 import Tournaments from '~/assets/tournaments';
 import Puzzles from '~/assets/puzzles';
+import DropDown from './DropDown';
 
 export default function CustomDrawerContent(props: any) {
   const router = useRouter();
   const { top, bottom } = useSafeAreaInsets();
+
   return (
     <View className="flex-1 bg-[#f0f0f0]">
       <DrawerContentScrollView {...props}>
-        <View className="flex-1 gap-y-1 p-4">
-          <Text className="text-lg font-bold">Atuku Praise</Text>
-          <Text className="text-gray-500">1500</Text>
+        <View className="flex-1 flex-row justify-between p-4">
+          <View className="gap-y-1">
+            <Text className="text-lg font-bold">Atuku Praise</Text>
+            <Text className="text-gray-500">1500</Text>
+          </View>
+          <View className="">
+            <DropDown />
+          </View>
         </View>
         {/* <DrawerItemList {...props} />
         <DrawerItem label={'Logout'} onPress={() => router.push('/')} /> */}
@@ -67,6 +74,7 @@ export default function CustomDrawerContent(props: any) {
             }}
           />
         </View>
+        
       </DrawerContentScrollView>
     </View>
   );

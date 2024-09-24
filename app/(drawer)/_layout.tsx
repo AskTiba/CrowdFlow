@@ -14,16 +14,18 @@ export default function Layout() {
     <GestureHandlerRootView style={{ flex: 1 }}>
       <Drawer
         screenOptions={{
-          // drawerHideStatusBarOnOpen: true,
           drawerContentStyle: { backgroundColor: '#ffd700' },
           drawerActiveTintColor: '#ffe5ec',
+          drawerStyle: {
+            width: '84%',
+          },
           // drawerLabelStyle: { marginLeft: -28 },
           headerLeft: () => (
             <Pressable onPress={onToggle} className="flex-row p-5">
               <Image
                 className="size-12 self-center rounded-full"
                 source={{
-                  uri: 'https://pbs.twimg.com/profile_images/1548355275467329537/YKrjuN6p_400x400.jpg',
+                  uri: 'https://pbs.twimg.com/media/FqN43DkXgAMYhFl?format=jpg&name=small',
                 }}
               />
             </Pressable>

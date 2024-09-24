@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View } from 'react-native';
+import AndroidSpinner from '~/components/AndroidSpinner';
 
-export default function puzzles() {
+export default function Puzzles() {
   return (
-    <View>
-      <Text>puzzles</Text>
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <AndroidSpinner size={80} duration={800} />
     </View>
-  )
+  );
 }

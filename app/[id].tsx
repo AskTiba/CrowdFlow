@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import { Stack, useLocalSearchParams } from 'expo-router';
 import events from '~/assets/events.json';
@@ -29,7 +29,9 @@ export default function EventPage() {
     <>
       <Stack.Screen
         options={{
-          header: () => <ExtendedCustomHeader event={event} />,
+          header: () => (
+            <ExtendedCustomHeader event={event} />
+          ),
         }}
       />
       <StatusBar style={'auto'} backgroundColor="#f0f0f0" />
