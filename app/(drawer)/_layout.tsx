@@ -41,6 +41,7 @@ export default function Layout() {
             headerTitleStyle: {
               fontSize: 18,
               fontWeight: 'bold',
+              color:'#555'
             },
           }}
         />

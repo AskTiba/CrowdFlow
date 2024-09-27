@@ -23,7 +23,7 @@
     "userInterfaceStyle": "light",
 
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/arms.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
